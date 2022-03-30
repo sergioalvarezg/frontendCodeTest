@@ -1,0 +1,37 @@
+<div class="bet-section">
+
+  <div class="selected-balls">
+    <div class="ball" *ngFor="let ball of betBalls" [ngClass]="ball.color">
+      <span class="ball-number">{{ball.Number}}</span>
+    </div>
+  </div>
+  
+  <form novalidate autocomplete="off" [formGroup]="betForm" (ngSubmit)="getTotal()">
+    <div class="bet-amount">
+      <div class="bets">
+        <span class="n-bets" *ngIf="ballCount > 0">{{ ballCount }}x</span>
+      </div>
+      <input class="amount" type="number" id="amount" formControlName="amount" >
+      <button class="btn" type="submit" [disabled]="disablePlaceAmount">
+        <span>OK</span>
+      </button>
+    </div>
+    <span class="error-message">
+      <div *ngIf="betForm.get('amount')?.errors?.['invalidAmount']">
+        The amount must be greater than or equal to 5€
+      </div>
+    </span>
+  </form>
+
+</div>
+
+<div class="total-section">
+  <div class="total">
+    <h3> Total: {{total}}€</h3>
+  </div>
+  <div>
+    <button class="btn btn-place-bet" (click)="placeBet()" [disabled]="disablePlaceBet">
+      <span>Place bet</span>
+    </button>
+  </div>
+</div>

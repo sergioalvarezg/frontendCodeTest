@@ -1,1 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+
+$color-body: #c2c6cc;
+$color-body-div: #ffffff;
+$color-btn: #5eadee;
+
+.color_0 {
+    background-color: gainsboro;
+}
+.color_1 {
+    background-color: red;
+}
+.color_2 {
+    background-color: antiquewhite;
+}
+
+.color_3 {
+    background-color: rgb(0, 161, 0);
+}
+
+.color_4 {
+    background-color: pink;
+}
+
+.color_5 {
+    background-color: yellow;
+}
+
+.color_6 {
+    background-color: aquamarine;
+}
+
+.color_7 {
+    background-color: rgb(211, 7, 211);
+}
+
+.color_8 {
+    background-color: rgb(211, 54, 54);
+}
+
+.color_9 {
+    background-color: orange;
+}
+
+.color_10 {
+    background-color: greenyellow;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(10, 93, 161);
+}
+
+.btn:disabled {
+    background-color: #c2c6cc !important;
+    color: black;
+}
+body {
+    background-color: $color-body;
+    font-family:sans-serif;
+}

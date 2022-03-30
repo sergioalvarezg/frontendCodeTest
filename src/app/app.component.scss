@@ -1,0 +1,21 @@
+@import "../styles.scss";
+
+.app {
+    display: grid;
+    grid-template-areas: 'ball ball bet';
+    grid-gap: 10px;
+    margin-top: 5%;
+    background-color: $color-body;
+}
+
+.ball-selector-section {
+    grid-area: ball;
+    background-color: $color-body-div;
+    text-align: center;
+}
+
+.ball-bet-slip-section{
+    background-color: $color-body-div;
+    grid-area: bet;
+    text-align: center;
+}

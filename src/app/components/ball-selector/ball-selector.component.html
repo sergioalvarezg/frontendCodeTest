@@ -1,0 +1,44 @@
+<ng-container *ngIf="showResult; else selectBallTemplate">
+  <div class="title">
+    <h1>Result</h1>
+  </div>
+
+  <div class="row ball-section">
+    <div class="ball" [ngClass]="resultBall.color">
+      <span class="ball-number">{{resultBall.Number}}</span>
+    </div>
+  </div>
+
+  <div class="result-selection">
+    <h2 [ngClass]="{'result-win': result === true, 'result-lose': !result}">{{resultText}}</h2>
+    <h3 *ngIf="result">{{resultAmount}}€</h3>
+    <div>
+      <button class="btn btn-play-again" (click)="playAgain()">
+        <span>Play Again!</span>
+      </button>
+    </div>
+    
+  </div>
+  
+</ng-container>
+<ng-template #selectBallTemplate>
+  <div class="title">
+    <h1>Numbers</h1>
+  </div>
+  
+  <div class="row ball-section">
+    
+    <div class="ball" *ngFor="let ball of ballList" [ngClass]="ball.color" (click)="ballClick(ball)">
+      <span class="ball-number">{{ball.Number}}</span>
+    </div>
+  
+  </div>
+  
+  <div class="clear-selection">
+    <button class="btn btn-clear" (click)="clear()">
+      <span>Clear selection</span>
+    </button>
+  </div>
+</ng-template>
+
+

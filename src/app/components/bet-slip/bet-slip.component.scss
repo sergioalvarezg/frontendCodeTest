@@ -1,0 +1,90 @@
+@import "../../../styles.scss";
+.bet-section {
+    margin-top: 15px;
+}
+.selected-balls{
+    display: inline-flex;
+}
+.ball {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 15px;
+    position: relative;
+    border: 1px solid black;
+}
+
+.ball-number {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bet-amount {
+    display: flex;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 24%;
+}
+
+.bets {
+    background-color: rgb(233, 229, 222);
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.n-bets{
+    position: relative;
+    top: 25%;
+    font-weight: 100;
+    font-size: x-large;
+    
+
+}
+
+.amount {
+    height: 47px;
+    text-align: center;
+    font-size: x-large;
+    border-radius: 5px;
+
+}
+
+.btn {
+    background-color: $color-btn;
+    color: white;
+    height: 54px;
+    width: 100px;
+    margin-left: 10px;
+    border-radius: 5px;
+    :hover{
+        cursor: pointer;
+    }    
+}
+
+.total-section {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-top: 10px solid $color-body;
+}
+
+.btn-place-bet {
+    background-color: $color-btn;
+    color: white;
+    height: 54px;
+    width: 200px;
+    margin-left: 10px;
+    border-radius: 5px;      
+}
+
+.error-message {
+    color: red;
+    margin: 5px;
+}
